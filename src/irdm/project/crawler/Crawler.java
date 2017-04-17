@@ -113,6 +113,10 @@ public class Crawler extends WebCrawler {
 		Set<WebURL> links = htmlParseData.getOutgoingUrls();
 		Vector<String> outgoingLinks = new Vector<>(links.size());
 		for (WebURL webUrl : links) {
+			if(webUrl.getURL().equals(url)){
+				continue;
+			}
+			
 			if (shouldVisit(webUrl.getURL())) {
 				outgoingLinks.add(webUrl.getURL());
 			}
