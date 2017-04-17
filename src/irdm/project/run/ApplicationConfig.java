@@ -12,7 +12,9 @@ import java.io.File;
 public class ApplicationConfig {
 
 	public static String SeedUrl = "http://www.cs.ucl.ac.uk";
-	public static String HomePath = "C:/TerrierSearchEngine/data";
+	public static String HomePath = "C:/TerrierSearchEngine/index_data_2";
+	
+	public static String stopWordListPath = "C:/TerrierSearchEngine/stopword-list.txt";
 	
 	public static String IndexPath = HomePath + File.separator +  "IndexData";
 	public static String CrawlPath = HomePath + File.separator +  "CrawlData";
@@ -21,7 +23,7 @@ public class ApplicationConfig {
 	
 	public static int NumberOfCrawlers = 3;
 	
-	public static boolean UsePageRank = true;
+	public static boolean UsePageRank = false;
 	// Maximum iterations to use in the power method when calculating the page rank
 	public static int PageRankMaxIterations = 10;
 	public static double PageRankTeleportProbability = 0.15;

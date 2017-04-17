@@ -38,6 +38,11 @@ public class IndexBuilder {
 		
 		ApplicationSetup.setProperty("metaindex.crop", "true");
 		ApplicationSetup.setProperty("ignore.low.idf.terms", "false");
+		
+		ApplicationSetup.setProperty("stopwords.filename", ApplicationConfig.stopWordListPath);
+		ApplicationSetup.setProperty("stopwords.intern.terms", "true");
+		
+		ApplicationSetup.setProperty("termpipelines", "Stopwords,PorterStemmer");
 //		ApplicationSetup.setProperty("querying.default.controls", "start,end,decorate:on,summaries:content,emphasis:title;content");
 //		ApplicationSetup.setProperty("querying.postfilters.controls", "decorate:org.terrier.querying.Decorate");
 //		ApplicationSetup.setProperty("querying.postfilters.order", "org.terrier.querying.Decorate");

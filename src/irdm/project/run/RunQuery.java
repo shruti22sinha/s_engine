@@ -36,7 +36,7 @@ public class RunQuery {
 	 */
 	public static void main(String[] args) {
 		TerrierInitialiser.InitTerrier();
-		ResultSet result = search("java");
+		ResultSet result = search("krinke");
 
 		// String[] displayKeys = result.getMetaKeys(); // url, title, body
 		// String[][] meta = new String[displayKeys.length][];
